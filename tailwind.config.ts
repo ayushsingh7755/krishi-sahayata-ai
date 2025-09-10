@@ -22,6 +22,7 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          hover: "hsl(var(--primary-hover))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -57,6 +58,14 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Agriculture-specific colors
+        'feature-bg': "hsl(var(--feature-bg))",
+        'stats-accent': "hsl(var(--stats-accent))",
+        'text-hero': "hsl(var(--text-hero))",
+        'text-muted': "hsl(var(--text-muted))",
+      },
+      backgroundImage: {
+        'hero-gradient': 'var(--hero-gradient)',
       },
       borderRadius: {
         lg: "var(--radius)",
