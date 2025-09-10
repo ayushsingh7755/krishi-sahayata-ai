@@ -11,6 +11,8 @@ const Navigation = () => {
     { label: "Market Prices", path: "/market-prices" },
     { label: "Tools", path: "/tools" },
     { label: "Learning", path: "/learning" },
+    { label: "Control Panel", path: "http://10.88.32.209", external: true },
+    { label: "Contact Us", path: "/contact" },
   ];
 
   return (
@@ -22,17 +24,29 @@ const Navigation = () => {
 
       <div className="hidden md:flex items-center gap-8">
         {navItems.map((item) => (
-          <Link
-            key={item.path}
-            to={item.path}
-            className={`text-sm font-medium transition-colors hover:text-primary ${
-              location.pathname === item.path
-                ? "text-primary"
-                : "text-muted-foreground"
-            }`}
-          >
-            {item.label}
-          </Link>
+          item.external ? (
+            <a
+              key={item.path}
+              href={item.path}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
+            >
+              {item.label}
+            </a>
+          ) : (
+            <Link
+              key={item.path}
+              to={item.path}
+              className={`text-sm font-medium transition-colors hover:text-primary ${
+                location.pathname === item.path
+                  ? "text-primary"
+                  : "text-muted-foreground"
+              }`}
+            >
+              {item.label}
+            </Link>
+          )
         ))}
       </div>
 

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import heroImage from "@/assets/agriculture-hero.jpg";
 import { 
   Sprout, 
@@ -94,36 +95,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="bg-feature-bg py-12">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-stats-accent mb-2">10K+</div>
-              <div className="text-text-muted">Active Farmers</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-stats-accent mb-2">500+</div>
-              <div className="text-text-muted">Crops Supported</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-stats-accent mb-2">95%</div>
-              <div className="text-text-muted">Accuracy Rate</div>
-            </div>
-            <div className="flex items-center justify-center gap-1">
-              <div className="flex">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <div className="ml-2">
-                <div className="font-bold text-lg">4.8</div>
-                <div className="text-sm text-text-muted">User Rating</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Features Section */}
       <section className="container mx-auto px-6 py-20">
@@ -164,6 +135,8 @@ const Index = () => {
           ))}
         </div>
       </section>
+      
+      <Footer />
     </div>
   );
 };
